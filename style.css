@@ -1,0 +1,1123 @@
+@font-face {
+    font-style: normal;
+    font-weight: normal;
+    font-family: "KlavikaRegular";
+    src: url('/web/20140319162245im_/http://www.big.dk/layouts/default/css/fonts/klavika-regular-webfont.eot');
+    src: url('/web/20140319162245im_/http://www.big.dk/layouts/default/css/fonts/klavika-regular-webfont.eot#iefix') format('embedded-opentype'),
+         url('/web/20140319162245im_/http://www.big.dk/layouts/default/css/fonts/klavika-regular-webfont.woff') format('woff'),
+         url('/web/20140319162245im_/http://www.big.dk/layouts/default/css/fonts/klavika-regular-webfont.ttf') format('truetype'),
+         url('/web/20140319162245im_/http://www.big.dk/layouts/default/css/fonts/klavika-regular-webfont.svg#KlavikaRegular') format('svg');
+}
+@font-face {
+    font-style: normal;
+    font-weight: normal;
+    font-family: "BIGPixelRegular";
+    src: url('/web/20140319162245im_/http://www.big.dk/layouts/default/css/fonts/big-pixel-webfont.eot');
+    src: url('/web/20140319162245im_/http://www.big.dk/layouts/default/css/fonts/big-pixel-webfont.eot#iefix') format('embedded-opentype'),
+         url('/web/20140319162245im_/http://www.big.dk/layouts/default/css/fonts/big-pixel-webfont.woff') format('woff'),
+         url('/web/20140319162245im_/http://www.big.dk/layouts/default/css/fonts/big-pixel-webfont.ttf') format('truetype'),
+         url('/web/20140319162245im_/http://www.big.dk/layouts/default/css/fonts/big-pixel-webfont.svg#BIGPixelRegular') format('svg');
+}
+html, body {
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+/*    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);*/
+    
+    margin:0;
+    padding:0;
+    background-color: #fff;
+    color: #000;
+    width: auto;
+    height: 100%;
+    min-height: 100%;
+/*    overflow-y: auto;*/
+    overflow-y: hidden;
+    font-family: "KlavikaRegular",Courier,"Courier New",monospace;
+    font-size: 14px;
+}
+img, p, form {
+    border: none;
+    margin: 0px;
+    padding: 0px;
+}
+h1, h2 {
+    margin: 4px 0 10px 0;
+    padding: 0px;
+}
+h1 {
+    font-family: "BIGPixelRegular",Courier,"Courier New",monospace;
+    font-size: 40px; /*40*/
+    line-height: 34px;
+    font-weight: normal;
+}
+div.clear {
+    clear: both;
+    width: 0px;
+    height: 0px;
+    margin: 0px; 
+    padding: 0px;
+    line-height: 0px;
+    font-size:1px;
+}
+.contentblock {
+    min-height:100%;
+    height: 100%;
+    width: auto;
+/*    left: 250px;*/
+    left: 140px;
+    right: 0px;
+    position: absolute;
+    top: 0;
+    overflow-x: hidden;
+/*    overflow-y: auto;*/
+    overflow-y: scroll;
+    padding-right: 130px;
+/*    position: fixed;*/
+}
+.mainblock {
+    display: none;
+/*    position: absolute;*/
+}
+.content {
+    padding: 10px 8px 20px 2px;
+    background-color: #fff;
+    width: 800px;
+    word-wrap: break-word;
+    margin: auto;
+    min-height: 100%;
+    
+}
+.leftblock {
+    background-color: #fff;
+    min-height: 481px;
+/*    width: 250px;*/
+    width: 140px;
+    float: left;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0px;
+}
+.menublock {
+    height: 100%;
+    top: 0px;
+    bottom: 0px;
+    overflow: auto;
+/*    position: absolute;*/
+/*    width: 224px;*/
+    width: 114px;
+    background-color: #fff;
+    padding: 10px 0px 10px 25px;
+    min-height: 444px;
+}
+.menu {
+    font-family: "BIGPixelRegular",Courier,"Courier New",monospace;
+    font-size: 20px; /*20*/
+    white-space: nowrap;
+}
+ul.menu {
+    list-style: none outside none; 
+    margin: 0; 
+    padding: 0;
+}
+ul.menu li {
+    margin: 0px 0 3px 0; 
+    padding: 0;
+}
+.menublock ul.menu li:first-child {
+    line-height: 34px;
+    vertical-align: middle;
+    margin-bottom: 53px;
+}
+.menublock a, .canvasmenublock a, .slidesmenublock a {
+    text-decoration: none;
+    font-weight: normal;
+}
+/**/
+div.loading {
+    display: none;
+    text-align: left;
+    vertical-align: middle;
+    height: 100%;
+    position: absolute;
+    z-index: 3000;
+    width: 100%;
+}
+#preloading {
+    font-family: "BIGPixelRegular",Courier,"Courier New",monospace;
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+    position: fixed;
+    display: block;
+    background: #fff;
+}
+#preloading>div {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    height: 25px;
+    z-index: 3001;
+}
+#preloading .value {
+    display: inline-block;
+    width: 35px;
+    text-align: right;
+}
+img.loading {
+/*    width: 50%;
+    height: 20px;*/
+    /*
+    display: none;
+    */
+    position: fixed;
+    z-index: 3000;
+    top: 10px;
+    
+    /*height: 5px;*/
+    /*width: 100%;*/
+    right: 20px;
+}
+.canvasmenublock {
+    position: absolute; 
+    bottom: 0px; /*0px*/
+/*    width: 1250px;*/
+/*    left: 25px; */
+    width: 100%;
+}
+.canvasmenublock ul.menu li {
+    float: left;
+    margin-right: 50px;
+/*    color: green;*/
+}
+
+.canvasmenublock div {
+    float: left;
+}
+.canvasmenublock div:first-child {
+    width: 50px;
+    margin-left: 25px;
+}
+.canvasmenublock div:nth-child(2) {
+/*    width: 1200px;*/
+    text-align: center;
+    position: absolute;
+/*    width: 100%;*/
+/*    width: 1275px;*/
+/*    width: 1300px;*/
+/*    left: 50px;
+    right: 50px;*/
+    left: 75px;
+    right: 75px;
+    width: auto;
+    margin: auto;
+}
+canvas {
+/*    bottom: 50px;
+    left: 50px;
+    position: relative;*/
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+/*    left: 50px;*/
+    left: 0px;
+/*    right: 50px;*/
+    bottom: 65px; /*65px-81*/
+}
+div.canvasblock {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 16px; /* was 16*/
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+div.canvasblock .menu span {
+    margin-left: 25px;
+}
+div.canvasblock .menu span:first-child {
+    margin-left: 0px;
+}
+h3 {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0px;
+    margin: 0px;
+}
+a.title {
+    font-weight: bold;
+}
+a, a:visited {
+    text-decoration: none;
+    color: #426ba4;
+}
+a:hover, a.active {
+    text-decoration: none;
+    color: #ff0000;
+}
+a.active {
+    color: #ff0000 !important;
+}
+.menu a, .menu a:visited {
+    color: #000;
+}
+.menu a:hover, .menu a:active {
+    color: #ff0000;
+}
+.paginationBottom .page-nav {
+    margin-top: 40px;
+}
+.paginationTop .page-nav {
+    margin-bottom: 10px;
+}
+.pagination a {
+    color: #000;
+    font-weight: bold;
+}
+.twocolumns {
+    clear: both;
+}
+.twocolumns>div:first-child {
+    float: left; 
+    width: 200px; /*was 150px*/
+    min-height: 1px;
+}
+.twocolumns>div:nth-child(2) {
+    float: left; 
+    padding-left: 30px;
+    width: 570px; /*was 620px */
+}
+.lectures .twocolumns>div:first-child {
+    width: 150px;
+}
+.lectures .twocolumns>div:nth-child(2) {
+    width: 620px;
+}
+.news>div, .kibisi>div, .about>div, .media>div {
+    margin-top: 40px;
+}
+.news>div:first-child, .kibisi>div:first-child, .about>div:first-child, .media>div:first-child {
+    margin-top: 0px;
+}
+.news .picture, .kibisi .picture, .about .picture, .media .picture {
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.contact .picture, .lectures .picture, .shop .picture, .awards .picture {
+    overflow: hidden;
+}
+.news .videocode, .media .videocode {
+    display: none;
+}
+.news .description, .media .description {
+    text-align: justify;
+}
+.lectures .description {
+    margin-top: 10px;
+}
+.lectures>div {
+    margin-top: 50px;
+}
+.lectures>div:first-child {
+    margin-top: 30px;
+}
+.lectures .info {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+.lectures .info .name {
+    width: 75px;
+}
+.lectures .info .value, .lectures .info .value div {
+    width: 545px;
+}
+.shop>div, .contact>div, .awards>div {
+    margin-top: 50px;
+}
+.shop>div:first-child, .contact>div:first-child, .awards>div:first-child {
+    margin-top: 0px;
+}
+.jobs>div {
+    margin-top: 60px;
+}
+.jobs>div:first-child {
+    margin-top: 0px;
+}
+/*
+.jobs strong {
+    font-weight: normal;
+}
+*/
+.jobs .title>h3 {
+    float: left;
+}
+.jobs .title>span {
+    float: right;
+}
+
+
+.staff .name, .staff .office {
+    font-weight: bold;
+}
+table {
+    padding: 0px;
+    border-spacing: 0px;
+    border: 0px;
+}
+.staff table tr:hover {
+    background: #f5f7ff;
+}
+.staff table td.name {
+    width: 200px;
+}
+.staff table td.job {
+    width: 280px;
+}
+.staff table td.phone {
+    width: 150px;
+}
+.staff table td.email {
+    width: 150px;
+}
+.staff table td.cv {
+    width: 20px;
+}
+.staff table td.office {
+    padding-top: 30px;
+}
+
+/****** slides *******/
+.slideshowblock {
+    display: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.slideshowblock *, .flyingIcon, .flyingIcon * {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.teamAndDescr * {
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+.slidesinterface {
+    position: fixed;
+    min-width: 350px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 16px; /*was 12*/
+/*    z-index: 299;*/
+}
+.slidesmenublock {
+    width: 250px;
+    height: 150px;
+    min-width: 250px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    z-index: 299;
+}
+.slidesmenublock ul.menu li:last-child {
+    margin-bottom: 0px;
+}
+/*
+.slidesmenublock .menu a, .slides .pagination {
+    text-shadow:
+        1px 1px 0 #fff,
+        -1px -1px 0 #fff,  
+        1px -1px 0 #fff,
+        -1px  1px 0 #fff,
+        1px  1px 0 #fff;
+}*/
+.slidesmenublock .menu {
+    padding-left: 25px; /*20?*/
+}
+.slides {
+/*    border: 1px dotted black;*/
+    position: fixed;
+    bottom: 30px;
+    top: 30px;
+    right: 175px;
+    left: 175px;
+/*    min-width: 500px;*/
+    min-width: 200px;
+}
+.slidespanelblock {
+    width: 250px;
+    height: 150px;
+    min-width: 250px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    text-align: right;
+    /*z-index: 299;*/
+}
+.slidespanelblock .slidespanel {
+    padding: 0px 20px 0px 0px;
+}
+.slidespanelblock .pagination {
+    font-family: "BIGPixelRegular",Courier,"Courier New",monospace;
+    width: auto;
+/*    float: right;*/
+    clear: both;
+    border: none;
+    margin-top: 0px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.slidespanelblock .pagination .page-nav {
+    height: 28px;
+    line-height: 28px;
+    vertical-align: middle;
+}
+.slidespanelblock .pagination .page-nav span {
+    min-width: 48px;
+    display: inline-block;
+    text-align: center;
+}
+.slidespanelblock .pagination a.next {
+    background: url("/web/20140319162245im_/http://www.big.dk/layouts/default/css/images/arrow-right.png") no-repeat scroll 0 0 transparent;
+    width: 11px;
+    height: 15px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.slidespanelblock .pagination a.next:hover, .slidespanelblock .pagination a.next.hover {
+    background: url("/web/20140319162245im_/http://www.big.dk/layouts/default/css/images/arrow-right-hover.png") no-repeat scroll 0 0 transparent;
+    height: 19px;
+}
+.slidespanelblock .pagination a.prev {
+    background: url("/web/20140319162245im_/http://www.big.dk/layouts/default/css/images/arrow-left.png") no-repeat scroll right top transparent;
+    width: 11px; /*17*/
+    height: 15px; /*20*/
+    display: inline-block;
+    vertical-align: middle;
+}
+.slidespanelblock .pagination a.prev:hover, .slidespanelblock .pagination a.prev.hover {
+    background: url("/web/20140319162245im_/http://www.big.dk/layouts/default/css/images/arrow-left-hover.png") no-repeat scroll right top transparent;
+    height: 19px; /*28*/
+}
+.slidesfspanel .fullScrButton {
+    display: inline-block;
+    width: 15px; /*24*/
+    height: 15px; /*24*/
+    background: url("/web/20140319162245im_/http://www.big.dk/layouts/default/css/images/btn-fullscreen-normal.png") no-repeat scroll right center transparent;
+    border: none; 
+/*    float: right;*/
+    cursor: pointer;
+}
+.slidesfspanel {
+    width: 250px;
+    height: 150px;
+    min-width: 250px;
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    text-align: right;
+    z-index: 299;
+}
+body.fullscreen .slidesfspanel .fullScrButton {
+    background: url("/web/20140319162245im_/http://www.big.dk/layouts/default/css/images/btn-fullscreen-fullscreen.png") no-repeat scroll right center transparent;
+}
+body.fullscreen .slidespanelblock .pagination a.next {
+    background: url("/web/20140319162245im_/http://www.big.dk/layouts/default/css/images/arrow-right-fullscreen.png") no-repeat scroll 0 0 transparent;
+}
+body.fullscreen .slidespanelblock .pagination a.next:hover, body.fullscreen .slidespanelblock .pagination a.next.hover {
+    background: url("/web/20140319162245im_/http://www.big.dk/layouts/default/css/images/arrow-right-fullscreen-hover.png") no-repeat scroll 0 0 transparent;
+}
+body.fullscreen .slidespanelblock .pagination a.prev {
+    background: url("/web/20140319162245im_/http://www.big.dk/layouts/default/css/images/arrow-left-fullscreen.png") no-repeat scroll 0 0 transparent;
+}
+body.fullscreen .slidespanelblock .pagination a.prev:hover, body.fullscreen .slidespanelblock .pagination a.prev.hover {
+    background: url("/web/20140319162245im_/http://www.big.dk/layouts/default/css/images/arrow-left-fullscreen-hover.png") no-repeat scroll 0 0 transparent;
+}
+body.fullscreen {
+    background: none no-repeat scroll center center #000;
+    color: #fff;
+}
+body.fullscreen .menu a, body.fullscreen .menu a:visited {
+    color: #fff;
+}
+body.fullscreen .menu a:hover, body.fullscreen .menu a:active {
+    color: #ff0000;
+}
+body.fullscreen .slides {
+/*    border: 1px dotted black;*/
+    position: fixed;
+    bottom: 0px;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+}
+.slides .prevzone, .slides .nextzone {
+    display: block;
+    position: absolute;
+    width: 50%; 
+/*    height: 100%;*/
+    cursor: pointer;
+    z-index: 100;
+    top: 0px; 
+    bottom: 0px; 
+    margin: auto;
+    outline: none;
+    border: none;
+    
+/*    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;*/
+
+}
+.slides .prevzone {
+    left: 0px; 
+}
+.slides .nextzone {
+    right: 0px; 
+}
+.slides .prevzone:hover, .slides .nextzone:hover {
+    background: #fff;
+    opacity: 0;
+    outline: none;
+    border: none;
+}
+.slides .prevzone:active, .slides .nextzone:active, 
+.slides .prevzone:visited, .slides .nextzone:visited {
+    border: none;
+    outline: none;
+}
+.slides .prevzone img, .slides .nextzone img {
+    width: 100%; 
+    height: 100%; 
+    z-index: inherit;
+    outline: none;
+    border: none;
+    opacity: 0;
+
+}
+.fullscreen .slides .prevzone, .fullscreen .slides .nextzone {
+    top: 166px;
+    bottom: 166px;
+}
+.slideshowblock div.loading {
+    background: url("/web/20140319162245im_/http://www.big.dk/layouts/default/css/images/loadingslide-normal.gif") no-repeat scroll center center transparent;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    position: static;
+/*    float: right;*/
+/*    bottom: 4px;*/
+    width: 24px;
+    height: 24px;
+/*    margin-right: 5px;*/
+/*    height: 100%;
+    width: 100%;*/
+/*    position: fixed;*/
+    z-index: 3000;
+    
+}
+body.fullscreen .slideshowblock div.loading {
+    background: url("/web/20140319162245im_/http://www.big.dk/layouts/default/css/images/loadingslide.gif") no-repeat scroll center center transparent;
+}
+.slideshowblock img.loading {
+/*    display: none;*/
+    width: 24px;
+    height: 24px;
+    position: static;
+    /*
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;*/
+}
+.slideshowblock .nextslide, .slideshowblock .currslide {
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+}
+.slideshowblock .nextslide {
+    display: none;
+    z-index: 10;
+}
+.slideshowblock .currslide {
+    z-index: 8;
+}
+.slideshowblock .fakeslide {
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    z-index: 12;
+    display: none;
+}
+.slidespanel {
+    z-index: 299;
+}
+.slidesmenublock-wrapper, .slidespanel-wrapper {
+    position: absolute;
+    bottom: 0px;
+    z-index: 299;
+}
+.slidesmenublock-wrapper {
+    left: 0px;
+}
+.slidespanel-wrapper {
+    right: 20px;
+}
+.slidesfspanel-wrapper {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 299;
+}
+.slide {
+    background: #fff;
+}
+body.fullscreen .slide {
+    background: #000;
+}
+.slide .description {
+/*    display: none;*/
+    position: absolute;
+    overflow: hidden;
+    margin: auto;
+    font-size: 16px;
+/*    opacity: 0;*/
+}
+.slide .description p {
+    margin: 0px;
+    padding: 0px;
+}
+.slide .description.center, .slide .description.top, .slide .description.bottom {
+    text-align: center;
+}
+.slide .description.left, .slide .description.topleft, .slide .description.bottomleft {
+    text-align: left;
+}
+.slide .description.right, .slide .description.topright, .slide .description.bottomright {
+    text-align: right;
+}
+.slide .description.left, .slide .description.right, .slide .description.center {
+    margin: auto;
+}
+.slideshowblock .slide.currslide .description{
+    z-index: 9;
+}
+.slideshowblock .slide.nextslide .description{
+    z-index: 11;
+}
+.slide .projectinfo .maininfo {
+    margin-bottom: 50px;
+    font-family: "BIGPixelRegular",Courier,"Courier New",monospace;
+}
+.slide .projectinfo .maininfo td.projectAttachment {
+    width: 17px;
+    vertical-align: middle;
+}
+.projectAttachment a {
+    visibility: hidden;
+    display: inline-block;
+    width: 17px;
+    height: 24px;
+    background: url("/web/20140319162245im_/http://www.big.dk/layouts/default/css/images/btn-pdf.png") no-repeat scroll right top transparent;
+    vertical-align: middle;
+    outline: none;
+}
+.projectAttachment a:hover {
+    background: url("/web/20140319162245im_/http://www.big.dk/layouts/default/css/images/btn-pdf-hover.png") no-repeat scroll right top transparent;
+}
+.projectAttachment a.blackIcon {
+    background: url("/web/20140319162245im_/http://www.big.dk/layouts/default/css/images/btn-pdf-hover.png") no-repeat scroll right top transparent;
+}
+.projectAttachment a.blackIcon:hover {
+    opacity: 0.3;
+}
+div.projectAttachment {
+    position: fixed; 
+    left: 0px; 
+    bottom: 0px;
+    width: 17px;
+    height: 24px;
+    display: none;
+    z-index: 301;
+}
+.slideVideoPlay {
+    position: fixed; 
+    left: 0px; 
+    bottom: 0px;
+    width: 800px;
+    height: 400px;
+    display: none;
+    z-index: 300;
+}
+.slideVideoPlay .play {
+    background: url('/web/20140319162245im_/http://www.big.dk/layouts/default/css/images/play-button.png') no-repeat scroll center center transparent;
+    display: inline-block; 
+    width: 100%; 
+    height: 100%;
+    position: relative; 
+    padding: 0px; 
+    border: 0px;
+    opacity: 0.5;
+}
+.slideVideoPlay .videocode {
+    display: none;
+    width: 800px;
+    height: 450px;
+    
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+}
+.slide .projectinfo img.slideicon {
+    width: 80px;
+    height: 80px;
+}
+.slide .projectinfo .maininfo table {
+    font-size: 16px;
+}
+.slide .projectinfo .maininfo td.title {
+    padding-bottom: 20px;
+    vertical-align: top;
+    font-weight: normal;
+}
+.slide .projectinfo .maininfo td.title .name {
+    font-size: 20px;
+}
+.slide .projectinfo .maininfo td.title .code {
+    font-size: 32px;
+}
+.slide .projectinfo .maininfo td.slideiconcell {
+/*    padding-right: 30px;*/
+    width: 110px;
+    height: 80px;
+/*    vertical-align: top;*/
+}
+.slide .projectinfo .maininfo td.cellvalue {
+    font-weight: normal;
+}
+.slide .projectinfo .maininfo td.celltitle {
+    text-transform: uppercase;
+    width: 120px;
+}
+.slide .projectinfo .team td.celltitle {
+    width: 110px;
+    white-space: nowrap;
+    font-weight: bold;
+    padding-right: 5px;
+    vertical-align: top;
+}
+.slide .projectinfo .projectDescription {
+    margin-top: 18px;
+    overflow: hidden;
+}
+
+.slide .projectinfo .teamAndDescr {
+    overflow: hidden;
+}
+.slide .projectinfo .teamAndDescrCont {
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+.scrollbar .scrollArr {
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    left: -5.1px;
+    cursor: pointer;
+}
+
+.scrollbar .scrollArrUp {
+    top: -18px;
+    background: url('/web/20140319162245im_/http://www.big.dk/layouts/default/css/images/scroll-arrow-up.png') no-repeat scroll center center transparent;
+}
+.scrollbar .scrollArrDown {
+    background: url('/web/20140319162245im_/http://www.big.dk/layouts/default/css/images/scroll-arrow-down.png') no-repeat scroll center center transparent;
+    bottom: -18px;
+}
+.scrollbar .scrollArrUp.scrollArrUpWhite {
+    background: url('/web/20140319162245im_/http://www.big.dk/layouts/default/css/images/scroll-arrow-up-white.png') no-repeat scroll center center transparent;
+}
+.scrollbar .scrollArrDown.scrollArrDownWhite {
+    background: url('/web/20140319162245im_/http://www.big.dk/layouts/default/css/images/scroll-arrow-down-white.png') no-repeat scroll center center transparent;
+}
+/**/
+.slide .projectinfo {
+    top: 30px;
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+    overflow: hidden;
+    margin: auto;
+    position: absolute;
+}
+.slide .slidecontentbox {
+/*    border: 1px dotted red;*/
+    display: block; 
+    clear: both; 
+    margin: auto;
+/*    max-width: 100%;
+    max-height: 100%;*/
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    top: 0px;
+    overflow: hidden;
+}
+.slide img.slideimg {
+    display: block; 
+    clear: both; 
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    top: 0px;
+}
+
+div.slideicon {
+    top: 30px;
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+    overflow: hidden;
+    margin: auto;
+    position: absolute;
+/*    padding-top: 10px;*/
+    z-index: 300;
+}
+div.slideicon img {
+    width: 80px;
+    height: 80px;
+}
+div.flyingIcon {
+    position: fixed; 
+    left: 0px; 
+    bottom: 0px;
+    width: 80px;
+    height: 80px;
+    display: none;
+    z-index: 301;
+}
+div.flyingIcon img {
+    width: 80px;
+    height: 80px;
+}
+/* lazyload */
+img.lazy {
+/*    opacity: 0.2;*/
+/*    border: 1px solid #999;*/
+}
+img.original {
+    border: none;
+    padding: 0px;
+}
+.news .picture img.lazy, .kibisi .picture img.lazy, .about .picture img.lazy, .media .picture img.lazy {
+    width: 800px; /*800*/
+/*    height: 388px; 400*/
+/*    padding: 5px;*/
+}
+.news .picture img.original, .kibisi .picture img.original, .about .picture img.original, .media .picture img.original {
+    width: 800px;
+/*    height: auto;*/
+}
+.shop img.lazy, .contact img.lazy, .awards img.lazy {
+    width: 200px; /*200*/
+/*    height: 194px;*/
+/*    padding: 2px;*/
+}
+.shop img.original, .contact img.original, .awards img.original {
+    width: 200px;
+/*    height: auto;*/
+}
+.lectures img.lazy {
+    width: 150px; /*150*/
+/*    height: 144px;*/
+/*    padding: 2px;*/
+}
+.lectures img.original {
+    width: 150px;
+/*    height: auto;*/
+}
+#slidesCache, #firstslidesCache {
+    display: none;
+}
+a.lazyvideo {
+    display: inline-block;
+    width: 800px;
+    height: 100%;
+}
+a.lazyvideo .play {
+    background: url('/web/20140319162245im_/http://www.big.dk/layouts/default/css/images/play-button.png') no-repeat scroll center center transparent;
+    display: inline-block; 
+    width: 798px; 
+    height: 100%;
+    position: relative; 
+    margin: -4px 0px 0px 0px; 
+    padding: 0px; 
+    border: 0px;
+    left: 1px;
+    opacity: 0.5;
+    top: -100%;
+}
+.hide {
+    display: none;
+}
+
+/* search */
+form.search {
+    margin: 0 0 0 -15px;
+}
+input.search {
+    margin: 12px 0 20px;
+    padding: 1px 8px 3px 14px;
+    font-family: "BIGPixelRegular",Courier,"Courier New",monospace;
+    font-size: 40px;
+    line-height: 34px;
+    font-weight: normal;
+    border: 0px solid #999;
+    outline: none;
+    width: 750px;
+    border: 1px solid black;
+    margin-left: 0px;
+    color: #000000;
+    height: 40px;
+    vertical-align: top;
+    border-right: none;
+}
+input.search.placeholder {
+    color: #dddddd;
+}
+.searchIcon {
+    display: inline-block; 
+    width: 55px; 
+    height: 44px; 
+    border: 1px solid black;
+    border-left: none;
+    background: url('/web/20140319162245im_/http://www.big.dk/layouts/default/css/images/search.png') no-repeat scroll 0 0 transparent; 
+    cursor: pointer;   
+    margin-right: -15px;
+    margin-top: 12px;
+}
+.search>div.category {
+    margin-top: 30px;
+}
+.search>div.category:first-child {
+    margin-top: 0px;
+}
+.search .description {
+    text-align: justify;
+}
+.search div.category>div {
+    margin-top: 30px;
+}
+.search div.category>div:first-child {
+    margin-top: 0px;
+}
+.searchViewItem {
+    display: none;
+}
+.search .news>div, .search .kibisi>div, .search .about>div, .search .media>div, .search .jobs>div, 
+.search .lectures>div, .search .lectures>div:first-child, .search .shop>div, .search .contact>div,
+.search .awards>div {
+    margin-top: 0px;
+}
+.search .noresults {
+    font-family: "BIGPixelRegular",Courier,"Courier New",monospace;
+}
+
+.globeIconTooltip {
+    white-space: nowrap;
+    position: absolute;
+    width: auto;
+    height: 12px;
+    line-height: 12px;
+    background: #000000;
+    color: #ffffff;
+    z-index: 100;
+    padding: 2px 3px 2px 3px;
+    vertical-align: middle;
+    font-weight: normal;
+    font-size: 14px;
+    font-family: "BIGPixelRegular",Courier,"Courier New",monospace;
+}
+canvas.canvasGlobe {
+    left: 0px;
+    bottom: auto;
+    position: fixed;
+}
+.scrollbar {
+    background: transparent;
+    display: none;
+    width: 3px;
+    bottom: 30px;
+    right: 14px;
+    position: absolute;
+    /*
+    overflow: hidden;
+    */
+    cursor: pointer;
+}
+.scrollslider {
+    background: #000000;
+    width: 100%;
+    position: relative;
+    top: 0px;
+    height: 0px;
+}
+/*
+     FILE ARCHIVED ON 16:22:45 Mar 19, 2014 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 06:30:30 Jan 23, 2024.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 88.71
+  exclusion.robots: 0.203
+  exclusion.robots.policy: 0.187
+  cdx.remote: 0.084
+  esindex: 0.014
+  LoadShardBlock: 36.111 (3)
+  PetaboxLoader3.datanode: 92.226 (5)
+  load_resource: 278.936 (2)
+  PetaboxLoader3.resolve: 77.184 (2)
+*/

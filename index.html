@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./iconochive.css" />
+
+    <title>BIG | Bjarke Ingels Group</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Language" content="en-US">
+
+    <link href="./jquery-ui-1.8.21.custom.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="./style.css" media="screen" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="./jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="./jquery-ui-1.8.21.custom.min.js"></script>
+    <script type="text/javascript" src="./jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="./slides.min.jquery.js"></script>
+    <script type="text/javascript" src="./jquery.lazyload.js"></script>
+    <script type="text/javascript" src="./matrix.js"></script>
+    <script type="text/javascript" src="./utils.js"></script>
+    <script type="text/javascript" src="./fullscreenapi.js"></script>
+    <script type="text/javascript" src="./ui.js"></script>
+    <script type="text/javascript" src="./canvas.js"></script>
+    <script type="text/javascript" src="./slideshow.js"></script>
+    <script type="text/javascript" src="./globe.js"></script>
+
+</head>
+
+<body contextmenu="contextmenu">
+
+    <div class="canvasblock" id="canvasblock" style="display: block;">
+        <canvas id="canvas" width="1300" height="600" data-preview="">
+            You need upgrade your browser to see the projects.
+        </canvas>
+        <canvas id="canvasGlobe" class="canvasGlobe" width="600" height="600" style="display: none;">
+            You need upgrade your browser to see the globe.
+        </canvas>
+
+        <div class="menu canvasmenublock">
+            <div><a href="/news" id="canvasHide">INFO</a></div>
+            <div class="menu" id="canvasmenu">
+                <span><a href="?chronological">CHRONOLOGICAL</a></span>
+                <span><a href="?alphabetical">ALPHABETICAL</a></span>
+                <span><a href="?programmatic">PROGRAMMATIC</a></span>
+                <span><a href="?scale">SCALE</a></span>
+                <span><a href="?status">STATUS</a></span>
+                <span><a href="?location">LOCATION</a></span>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
